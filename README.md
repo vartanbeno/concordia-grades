@@ -2,6 +2,24 @@
 
 Web crawler built with Selenium, running a headless Chrome browser. It checks for your grades for a given semester at Concordia and sends you a text message once one is out.
 
+## Getting Started
+
+First, clone the repository and run the following:
+
+```
+cp .env-example .env
+```
+
+Then assign appropriate values to the environment variables defined in the `.env` file.
+
+### Prerequisites
+
+The following Python packages are required to run the program:
+
+- [python-dotenv](https://pypi.org/project/python-dotenv/)
+
+Click [here](requirements.txt) for the specific versions of the packages used for this project.
+
 ## Authors
 
 - **Vartan Benohanian**
