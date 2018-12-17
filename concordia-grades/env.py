@@ -2,6 +2,8 @@ import os
 from dotenv import load_dotenv
 
 
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+
 load_dotenv(verbose=True)
 
 ACADEMIC_TERM = os.getenv("ACADEMIC_TERM")

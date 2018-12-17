@@ -68,3 +68,4 @@ fabric.properties
 venv
 __pycache__
 .env
+chromedriver*
