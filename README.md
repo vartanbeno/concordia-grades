@@ -16,6 +16,7 @@ Then assign appropriate values to the environment variables defined in the `.env
 
 The following Python packages are required to run the program:
 
+- [selenium](https://pypi.org/project/selenium/)
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 - [twilio](https://pypi.org/project/twilio/)
 - [requests](https://pypi.org/project/requests/)
