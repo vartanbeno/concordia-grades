@@ -24,6 +24,17 @@ The following Python packages are required to run the program:
 
 Click [here](requirements.txt) for the specific versions of the packages used for this project.
 
+### Docker
+
+Run the following to start up the script:
+
+```
+docker image build -t grades .
+docker container run -it --rm grades
+```
+
+You can also specify the `-d` or `--detach` option to run the container in detached mode.
+
 ## Authors
 
 - **Vartan Benohanian**
