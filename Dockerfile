@@ -12,4 +12,4 @@ RUN wget https://bootstrap.pypa.io/get-pip.py && \
 
 COPY . .
 
-ENTRYPOINT ["python3", "concordia-grades/get_grades.py"]
+ENTRYPOINT ["python3", "concordia-grades/main.py"]
