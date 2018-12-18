@@ -3,11 +3,16 @@ from chromedriver import chromedriver_path, download_chromedriver, options
 from text_message import text_myself
 from gpa import gpa
 
+import argparse
 from time import sleep
 from random import randint
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+
+parser = argparse.ArgumentParser(description="Configure MyConcordia crawler.")
+parser.add_argument("-hide", "--hide-grade", action="store_true", help="do not reveal grade in text message", default=False)
+args = parser.parse_args()
 
 courses_and_grades = {}
 done = False
@@ -73,7 +78,10 @@ while not done and errors <= 100:
                 courses_and_grades[course] = grade
             elif grade != courses_and_grades[course]:
                 courses_and_grades[course] = grade
-                text_myself("You got {} ({} GPA) in {}.".format(grade, gpa[grade], course))
+                if args.hide_grade:
+                    text_myself("Your grade for {} is out.".format(course))
+                else:
+                    text_myself("You got {} ({} GPA) in {}.".format(grade, gpa[grade], course))
 
         browser.quit()
 

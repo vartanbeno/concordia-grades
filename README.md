@@ -14,7 +14,7 @@ Then assign appropriate values to the environment variables defined in the `.env
 
 ### Prerequisites
 
-The following Python packages are required to run the program:
+Python 3 and the following packages are required to run the script:
 
 - [selenium](https://pypi.org/project/selenium/)
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
@@ -24,13 +24,24 @@ The following Python packages are required to run the program:
 
 Click [here](requirements.txt) for the specific versions of the packages used for this project.
 
+### Running
+
+The file to run is in the `concordia-grades/` directory.
+
+```
+python main.py [-hide|--hide-grade]
+
+optional arguments:
+    -hide, --hide-grade             do not reveal grade in text message
+```
+
 ### Docker
 
 Run the following to start up the script:
 
 ```
 docker image build -t grades .
-docker container run -it --rm grades
+docker container run -it --rm grades [-hide|--hide-grade]
 ```
 
 You can also specify the `-d` or `--detach` option to run the container in detached mode.
