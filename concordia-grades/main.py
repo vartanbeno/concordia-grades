@@ -21,8 +21,8 @@ errors = 0
 download_chromedriver()
 sleep(1)
 
-# Keep running until all courses have a grade... or until we get 1000 errors.
-while not done and errors <= 1000:
+# Keep running until all courses have a grade
+while not done:
 
     try:
 
