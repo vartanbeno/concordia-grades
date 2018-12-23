@@ -16,6 +16,7 @@ args = parser.parse_args()
 
 courses_and_grades = {}
 done = False
+attempts = 0
 errors = 0
 
 download_chromedriver()
@@ -85,7 +86,8 @@ while not done:
 
         browser.quit()
 
-        print(courses_and_grades)
+        attempts += 1
+        print("{} -- attempt #{}".format(courses_and_grades, attempts))
 
         # Check if all keys have a non-empty value, i.e. if not all grades are out, then keep the script running.
         done = all(grade for grade in courses_and_grades.values())
