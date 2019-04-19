@@ -6,7 +6,9 @@ WORKDIR /usr/src/app/
 
 COPY requirements.txt .
 
-RUN wget https://bootstrap.pypa.io/get-pip.py && \
+RUN apt-get update && \
+    apt-get install -y python3-distutils && \
+    wget https://bootstrap.pypa.io/get-pip.py && \
     python3 get-pip.py && \
     pip3 install --no-cache-dir -r requirements.txt
 
